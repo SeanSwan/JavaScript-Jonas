@@ -137,7 +137,7 @@ console.log(x);*/
 */
 
 
-var heightJohn = (1.8288).toFixed();
+/*var heightJohn = (1.8288).toFixed();
 var massJohn = (113.398).toFixed();
 var heightMark = (2.1336).toFixed();
 var massMark = (158.757).toFixed();
@@ -145,6 +145,7 @@ var massMark = (158.757).toFixed();
 var meter = "Meters"
 var kg  = "kg"
 
+// calculations need to be analyized and redefined
 var bmiJohn = massJohn = (massJohn / heightJohn ^2 ) / (heightJohn * heightJohn);    
 console.log(bmiJohn);
 
@@ -153,4 +154,62 @@ console.log(bmiMark);
 
 var higherBodyFat = bmiMark >= bmiJohn
 
-console.log("Is Mark's BMI higher then John's?" + ' ' + higherBodyFat);
+console.log("Is Mark\'s BMI higher then John\'s?" + ' ' + higherBodyFat);
+
+//SOULTION 2
+
+var heightJohn = (1.8288).toFixed();
+var massJohn = (113.398).toFixed();
+var heightMark = (2.1336).toFixed();
+var massMark = (158.757).toFixed();
+
+var BMIMark = massMark / (heightMark * heightMark);
+var BMIJohn = massJohn / (heightJohn * heightJohn);
+console.log(BMIMark, BMIJohn);
+
+var markHigherBMI =BMIMark > BMIJohn;
+console.log('Is Mark\'s BMI higher then John\'s ' + markHigherBMI);*/
+
+
+/**********************************************************
+ * IF / ELSE STATEMENTS
+ */
+
+
+ var firstName = 'John';
+ var civilStatus = 'single';
+
+ if (civilStatus === 'married') {
+   console.log(firstName + ' is married!');
+
+ } else { 
+   console.log(firstName + ' will hopefully marry soon :)');
+ }
+
+    var isMarried = true;
+ if (isMarried) {
+  console.log(firstName + ' is married!');
+
+} else { 
+  console.log(firstName + ' will hopefully marry soon :)');
+}
+ 
+
+
+var heightJohn = (1.8288).toFixed();
+var massJohn = (113.398).toFixed();
+var heightMark = (2.1336).toFixed();
+var massMark = (158.757).toFixed();
+
+var BMIMark = massMark / (heightMark * heightMark);
+var BMIJohn = massJohn / (heightJohn * heightJohn);
+console.log(BMIMark, BMIJohn);
+
+if (BMIMark > BMIJohn) {
+  console.log('Mark\'s BMI is higher then John\'s.');
+} else {
+  console.log('John\'s BMI is higher then Mark\'s.');
+}
+
+//var markHigherBMI =BMIMark > BMIJohn;
+//console.log('Is Mark\'s BMI higher then John\'s ' + markHigherBMI);
