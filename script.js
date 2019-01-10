@@ -26,7 +26,7 @@ var johnMark = 'John and Mark';
  * VARIABLE MUTATION AND TYPE COERCION
  * */
  
-var firstName = 'John';
+/*var firstName = 'John';
 var age = 28;
 
 //TYPE COERCION
@@ -47,5 +47,39 @@ job = 'driver';
 alert(firstName + ' is a ' + age + ' year old ' + job + '. Is he married? ' + isMarried);
 
   //USING PROMPT FOR STORING USER DATA RECIEVING AN ANSWER TO A QUESTION ETC..
- var lastName = prompt('What is his last Name');
- console.log(firstName + ' ' + lastName);
+ var lastName = prompt('What is his last N ame');
+ console.log(firstName + ' ' + lastName); */
+
+ /****************************************
+  * BASIC OPERATORS
+  */
+var year, yearJohn, yearMark = 2020;
+now = 2019;
+ageJohn = 28;
+ageMark = 33;
+  
+  //MATH OPERATORS
+  var yearJohn = now - ageJohn;
+  var yearMark = now - ageMark;
+  
+  console.log(yearJohn);
+
+  console.log(now + 2);
+  console.log(now * 2);
+  console.log(now / 10);
+
+
+  //LOGICAL OPERATORS
+  var johnOlder = ageJohn < ageMark;
+  console.log(johnOlder);
+
+  //TYPE OF OPERATOR
+  console.log(typeof johnOlder);
+  console.log(typeof ageJohn);
+  console.log(typeof 'Mark is older then john'); 
+  var x; //UNDEFINED
+  console.log(typeof x);
+
+  
+
+
