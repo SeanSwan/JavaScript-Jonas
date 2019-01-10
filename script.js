@@ -210,6 +210,22 @@ if (BMIMark > BMIJohn) {
 } else {
   console.log('John\'s BMI is higher then Mark\'s.');
 }
+/**********************************************************************************
+ * Boolean logic
+ */
 
-//var markHigherBMI =BMIMark > BMIJohn;
-//console.log('Is Mark\'s BMI higher then John\'s ' + markHigherBMI);
+ var firstName = 'John';
+ var age = 16;
+
+ if (age < 13) {
+   console.log(firstName + ' is a boy');
+ } else if (age >= 13 && age < 20) {  //between 13 and 20 >= 13 AND  age < 20
+  console.log(firstName + ' is a teenager');
+ }  else if (age >= 20 && age < 30) {
+  console.log(firstName + ' is a young man');
+ } else {
+  console.log(firstName + ' is a man');
+ } 
+
+
+
