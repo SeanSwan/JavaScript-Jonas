@@ -1,6 +1,6 @@
 /*************************************
-* VARIABLES AND DATA TYPES
-*/
+ * VARIABLES AND DATA TYPES
+ */
 /*
 const firstName = 'john';
 console.log(firstName);
@@ -25,7 +25,7 @@ var johnMark = 'John and Mark';
 /*****************************************
  * VARIABLE MUTATION AND TYPE COERCION
  * */
- 
+
 /*var firstName = 'John';
 var age = 28;
 
@@ -50,10 +50,10 @@ alert(firstName + ' is a ' + age + ' year old ' + job + '. Is he married? ' + is
  var lastName = prompt('What is his last N ame');
  console.log(firstName + ' ' + lastName); */
 
- /****************************************
-  * BASIC OPERATORS
-  */
-var year, yearJohn, yearMark = 2020;
+/****************************************
+ * BASIC OPERATORS
+ */
+/*var year, yearJohn, yearMark = 2020;
 now = 2019;
 ageJohn = 28;
 ageMark = 33;
@@ -78,8 +78,63 @@ ageMark = 33;
   console.log(typeof ageJohn);
   console.log(typeof 'Mark is older then john'); 
   var x; //UNDEFINED
-  console.log(typeof x);
+  console.log(typeof x);*/
 
-  
+/****************************************
+ * OPERATOR PRECEDENCE /-- PRECEDENCE: the condition of being considered more important than someone or something else; priority in importance, order, or rank.
+ * https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Operator_Precedence
+ */
+
+var now = 2018;
+var yearJohn = 1989;
+var fullAge = 18;
+
+//MULTIPLE OPERATORS
+var isFullAge = now - yearJohn >= fullAge; // true
+console.log(isFullAge);
+
+//GROUPING
+// Calculate average age of john and his friend
+var ageJohn = now - yearJohn;
+var ageMark = 35;
+// CALCULATE SUM and DIVIDE IT BY 2
+var average = (ageJohn = ageMark) / 2;
+console.log(average);
+
+//MULTIPLE ASSIGNMENTS
+var x, y;
+x = y = (3 + 5) * 4 - 6; // 8 * 4 - 6 // 32 - 6 // 26
+console.log(x, y);
+
+//MORE OPERATORS
+x *= 2;   // 52
+console.log(x);
+
+x += 10;  // 62 
+console.log(x);
+x++
+console.log(x);
+x--
+console.log(x);
+
+/**********************************
+ * CODING CHALLLENGE 1
+ */
+
+ /*
+ Mark and John are trying to compare their first BMI
+ (Body Mass Index), which is calculated using the formula:
+ BMI = mass / height^2 = mass / (height * height).
+ (mass in kg and height in meter).
+
+ 1. Store Mark's and John's mass and height in variables
+ 2. Calculate both their BMIs
+ 3. Create a boolean variable containing information about
+ whether Mark has a higher BMI then John.
+ 4. Print a string to the console containing the variable from step 3.
+ (Somthing like "Is Mark's  BMI higher then John's? true").
+
+*/
+
 
 
