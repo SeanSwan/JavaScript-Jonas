@@ -121,7 +121,7 @@ console.log(x);*/
  * CODING CHALLLENGE 1
  */
 
- /*
+/*
  Mark and John are trying to compare their first BMI
  (Body Mass Index), which is calculated using the formula:
  BMI = mass / height^2 = mass / (height * height).
@@ -135,7 +135,6 @@ console.log(x);*/
  (Somthing like "Is Mark's  BMI higher then John's? true").
 
 */
-
 
 /*var heightJohn = (1.8288).toFixed();
 var massJohn = (113.398).toFixed();
@@ -170,31 +169,25 @@ console.log(BMIMark, BMIJohn);
 var markHigherBMI =BMIMark > BMIJohn;
 console.log('Is Mark\'s BMI higher then John\'s ' + markHigherBMI);*/
 
-
 /**********************************************************
  * IF / ELSE STATEMENTS
  */
 
+var firstName = "John";
+var civilStatus = "single";
 
- var firstName = 'John';
- var civilStatus = 'single';
-
- if (civilStatus === 'married') {
-   console.log(firstName + ' is married!');
-
- } else { 
-   console.log(firstName + ' will hopefully marry soon :)');
- }
-
-    var isMarried = true;
- if (isMarried) {
-  console.log(firstName + ' is married!');
-
-} else { 
-  console.log(firstName + ' will hopefully marry soon :)');
+if (civilStatus === "married") {
+  console.log(firstName + " is married!");
+} else {
+  console.log(firstName + " will hopefully marry soon :)");
 }
- 
 
+var isMarried = true;
+if (isMarried) {
+  console.log(firstName + " is married!");
+} else {
+  console.log(firstName + " will hopefully marry soon :)");
+}
 
 var heightJohn = (1.8288).toFixed();
 var massJohn = (113.398).toFixed();
@@ -206,15 +199,15 @@ var BMIJohn = massJohn / (heightJohn * heightJohn);
 console.log(BMIMark, BMIJohn);
 
 if (BMIMark > BMIJohn) {
-  console.log('Mark\'s BMI is higher then John\'s.');
+  console.log("Mark's BMI is higher then John's.");
 } else {
-  console.log('John\'s BMI is higher then Mark\'s.');
+  console.log("John's BMI is higher then Mark's.");
 }
 /**********************************************************************************
  * Boolean logic
  */
 
- var firstName = 'John';
+/*var firstName = 'John';
  var age = 16;
 
  if (age < 13) {
@@ -225,7 +218,62 @@ if (BMIMark > BMIJohn) {
   console.log(firstName + ' is a young man');
  } else {
   console.log(firstName + ' is a man');
- } 
+ } */
+
+/************************************************************************
+ * THE TERNARY OPERATOR AND SWITCH STATEMENTS
+ */
+
+var firstName = "John";
+var age = 18;
+
+age >= 18
+  ? console.log(firstName + " drinks beer.")
+  : console.log((firstName = " drinks juice."));
+
+// condition operator 18 then question beer or juice
+var drink = age >= 18 ? "beer" : "juice";
+console.log(drink);
 
 
+//IF ELSE VERSION
+/*if (age >= 18) {
+  var drink = "beer";
+} else {
+  var drink = "juice";
+}*/
 
+
+//SWITCH STATEMENT
+var job = 'teacher';
+switch (job) {
+  case 'teacher':
+  case 'instructer':
+  console.log(firstName + ' teaches kids how to code.');
+  break;
+  case'actor':
+  console.log(firstName + ' Performes in brodway plays.');
+  break;
+  case'personal trainer':
+  console.log(firstName + ' Knows Sean Swan is the best trainer in the world.');
+  break;
+  default:
+  console.log(firstName + ' dose somthing else');
+}
+
+
+age = 22
+//Make the switch statement work as an if else statement with ranges.
+switch (true) {
+  case age < 13:
+  console.log(firstName + ' is a boy');
+  break;
+  case age >= 13 && age < 20:
+  console.log(firstName + ' is a teenager');
+  break;
+  case age >= 20 && age < 30:
+  console.log(firstName + ' is a youngman.');
+  break;
+  default:
+  console.log(firstName + ' is a man.');
+}
