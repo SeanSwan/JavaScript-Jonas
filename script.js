@@ -85,7 +85,7 @@ ageMark = 33;
  * https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Operator_Precedence
  */
 
-var now = 2018;
+/*var now = 2018;
 var yearJohn = 1989;
 var fullAge = 18;
 
@@ -115,7 +115,7 @@ console.log(x);
 x++
 console.log(x);
 x--
-console.log(x);
+console.log(x);*/
 
 /**********************************
  * CODING CHALLLENGE 1
@@ -136,5 +136,23 @@ console.log(x);
 
 */
 
+
+var heightJohn = 1.8288;
+var massJohn = 113.398;
+var heightMark = 2.1336;
+var massMark = 158.757;
+
+var meter = "Meters"
+var kg  = "kg"
+
+var bmiJohn = massJohn = (massJohn / heightJohn ^2 ) / (heightJohn * heightJohn);    
+console.log(bmiJohn);
+
+var bmiMark = massMark = (massMark / heightMark ^2 ) / (heightMark * heightMark);    
+console.log(bmiMark);
+
+var higherBodyFat = bmiMark >= bmiJohn
+var isFullAge = now - yearJohn >= fullAge; // true
+console.log()
 
 
