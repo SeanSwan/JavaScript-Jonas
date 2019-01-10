@@ -137,10 +137,10 @@ console.log(x);*/
 */
 
 
-var heightJohn = 1.8288;
-var massJohn = 113.398;
-var heightMark = 2.1336;
-var massMark = 158.757;
+var heightJohn = (1.8288).toFixed();
+var massJohn = (113.398).toFixed();
+var heightMark = (2.1336).toFixed();
+var massMark = (158.757).toFixed();
 
 var meter = "Meters"
 var kg  = "kg"
@@ -152,7 +152,5 @@ var bmiMark = massMark = (massMark / heightMark ^2 ) / (heightMark * heightMark)
 console.log(bmiMark);
 
 var higherBodyFat = bmiMark >= bmiJohn
-var isFullAge = now - yearJohn >= fullAge; // true
-console.log()
 
-
+console.log("Is Mark's BMI higher then John's?" + ' ' + higherBodyFat);
