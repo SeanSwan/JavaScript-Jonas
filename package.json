@@ -1,0 +1,19 @@
+{
+  "name": "javascriptjonas",
+  "version": "1.0.0",
+  "description": "JavaScript Practice",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/SeanSwan/JavaScript-Jonas.git"
+  },
+  "author": "Sean London Swan",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SeanSwan/JavaScript-Jonas/issues"
+  },
+  "homepage": "https://github.com/SeanSwan/JavaScript-Jonas#readme"
+}
