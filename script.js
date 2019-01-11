@@ -329,7 +329,7 @@ switch (true) {
 
     */
 
-    var johnScore =  (89 + 120 + 103) / 3;
+    /*var johnScore =  (89 + 120 + 103) / 3;
     var mikeScore =  (116 + 94 + 123) / 3;
     var maryScore = (97 + 134 + 105) / 3;
     console.log(mikeScore, johnScore,  maryScore);
@@ -341,7 +341,9 @@ switch (true) {
       console.log('Mike\'s team wins with ' + mikeScore + 'points');
     } else if (maryScore > johnScore && maryScore > mikeScore) {
       console.log('Mary\'s team wins with ' + maryScore + ' points');
-    }
+    } else {
+      console.log('There is a draw');
+    }*/
     
     
     
@@ -355,4 +357,33 @@ switch (true) {
     console.log('there is a draw');
   }*/
 
-   
+  /***********************************************************************
+   * FUNCTIONS
+   */
+
+   function calculateAge(birthYear) {
+     return 2018 - birthYear;
+   }
+
+   var  ageJohn = calculateAge(1990);
+   var  ageSean = calculateAge(1980);
+   var  ageJasmine = calculateAge(1991);
+   var  ageMike = calculateAge(1940);
+   console.log(ageJohn, ageJasmine, ageSean, ageMike);
+
+   function yearsUntilRetirement(year, firstName) {
+     var age = calculateAge(year);
+     var retirement = 65 - age;
+
+     if (retirement > 0) {
+       console.log(firstName + ' retires in ' + retirement + ' years.')
+     } else {
+      console.log(firstName + ' is already retired.')
+     }
+     
+   }
+
+   yearsUntilRetirement(1990, 'John');
+   yearsUntilRetirement(1980, 'sean');
+   yearsUntilRetirement(1991, 'jasmine');
+   yearsUntilRetirement(1940, 'mike');
