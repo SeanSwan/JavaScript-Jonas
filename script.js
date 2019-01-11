@@ -327,5 +327,32 @@ switch (true) {
     different winners, keeping in mind there might be
     draws.
 
-    
     */
+
+    var johnScore =  (89 + 120 + 103) / 3;
+    var mikeScore =  (116 + 94 + 123) / 3;
+    var maryScore = (97 + 134 + 105) / 3;
+    console.log(mikeScore, johnScore,  maryScore);
+
+    if (johnScore > mikeScore && johnScore > maryScore) {
+      console.log('John\'s team wins with ' + johnScore + ' points');
+
+    } else if (mikeScore > johnScore && mikeScore > maryScore) {
+      console.log('Mike\'s team wins with ' + mikeScore + 'points');
+    } else if (maryScore > johnScore && maryScore > mikeScore) {
+      console.log('Mary\'s team wins with ' + maryScore + ' points');
+    }
+    
+    
+    
+    
+    /*if (johnScore > mikeScore) {
+      console.log('John\'s team wins with ' + johnScore + ' points');
+
+  } else if (mikeScore > johnScore) {
+    console.log('Mike\'s team wins with ' + mikeScore + ' points');
+  } else {
+    console.log('there is a draw');
+  }*/
+
+   
