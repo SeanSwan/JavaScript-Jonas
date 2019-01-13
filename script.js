@@ -552,7 +552,7 @@ console.log(tips, finalValues);*/
   (mass in kg and height in meter).*/
 
 
-  var john = {
+  /*var john = {
     fullName: 'John Smith',
     mass: 92,
     height: 1.95,
@@ -581,5 +581,54 @@ if (john.calcBMI() > mark.calcBMI()) {
   console.log(mark.fullName + ' has a higher BMI of ' + mark.bmi.toFixed());
 } else {
   console.log('They have the same BMI');
+}*/
+
+/******************************************************************************
+ * LOOPS AND ITERATION
+ */
+
+/*for (var i = 0; i < 10; i++) {
+  console.log(i);
 }
 
+// i = 0, 0 < 10 true, log i to console, i++
+// i = 1, 1 < 10 true, log i to console, i++
+//...
+// i = 9, 9 < 10 true, log i to console, i++ 
+// i = 10, 10 < 10 FALSE, exit loop! 
+
+var john = ['John', 'SMith', 1990, 'designer', false];
+for (var i = 0; i < john.length; i++) {
+  console.log(john[i]);
+}
+
+var john = ['John', 'Smith', 1990, 'teacher', 'designer', false, 'blue'];
+
+for (var i = 0; i < john.length; i++) {
+    console.log(john[i]);
+}
+  
+
+//While Loop
+  var i = 0;
+  while(i < john.length) {
+  console.log(john[i]);
+  i++;
+}*/
+
+// Continue and Break Statements
+var john = ['john', 'Smith', 1990, 'designer', false, 'blue'];
+for (var i = 0; i < john.length; i++) {
+  if (typeof john[i] !== 'string') continue;
+      console.log(john[i]);
+  }
+  for (var i = 0; i < john.length; i++) {
+    if (typeof john[i] !== 'string') break;
+        console.log(john[i]);
+    }
+
+    // Looping backwards
+    for (var i = john.length - 1; i >= 0; i--) {
+      console.log(john[i]);
+    }
+    
