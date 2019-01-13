@@ -459,7 +459,7 @@ if (height == "23") {
 
   (NOTE: To calculate 20% of a value, simply multiply if with 20/100 = 0.2)*/
 
-function tipCalculator(bill) {
+/*function tipCalculator(bill) {
   var percentage;
   if (bill < 50) {
     percentage = 0.2;
@@ -484,7 +484,39 @@ var finalValues = [
 bills[0] + tips[0], 
 bills[1] + tips[1], 
 bills[2] + tips[2]];
-console.log(tips, finalValues);
+console.log(tips, finalValues);*/
+
+
+/*********************************************************************************
+ * OBJECTS AND PROPERtieS
+ */
+//Object literal
+ var john = {
+   firstName: 'John',
+   lastName: 'Smith',
+   birthYear: 1990,
+   family: ['jane', 'Mark', 'Bob', 'Emily'],
+   job: 'teacher',
+   isMarried: false
+ };
+
+ console.log(john.firstName);
+ console.log(john['lastName']);
+ var x = 'birthYear';
+ console.log(john[x]);
+ 
+ //Mutate Objects
+ john.job = 'designer';
+ john['isMarried'] = true;
+ console.log(john);
+
+//New Object Syntax
+ var jane = new Object();
+ jane.firstName = 'Jane';
+ jane.birthYear = 1969;
+ jane['lastName'] = 'Smith';
+ console.log(jane);
+
 
 
 
