@@ -662,7 +662,7 @@ for (var i = 0; i < john.length; i++) {
      7. Calculate the average tip for each family
      8. Log to the console with family paid the highest tips on average.*/
 
-var john = {
+/*var john = {
   fullName: "John Smith",
   bills: [124, 48, 268, 180, 42],
   tipCalculator: function() {
@@ -740,4 +740,41 @@ if (john.average > mark.average) {
  console.log(john.fullName + '\'s family pays higher tips with an average of $' + john.average.toFixed());
 } else if (mark.average > john.average) {
   console.log(mark.fullName + '\'s family pays higher tips with an average of $' + mark.average.toFixed());
+}*/
+
+
+/*****************************************************************************************
+ * HOISTING
+ */
+
+ calculateAge(1965);
+ 
+ function calculateAge (year) {
+   console.log(2016 - year);
+
+ }
+
+ calculateAge(1990);
+
+ 
+  // retirement(1956);
+
+ var retirement = function(year) {
+   console.log (65 - (2016  - year));
+ }
+
+ retirement(1980);
+
+ // variables 
+console.log(age);
+var age = 23;
+console.log(age);
+
+function foo() {
+  var age = 65;
+  console.log(age);
 }
+
+foo();
+console.log(age);
+
