@@ -235,14 +235,12 @@ age >= 18
 var drink = age >= 18 ? "beer" : "juice";
 console.log(drink);
 
-
 //IF ELSE VERSION
 /*if (age >= 18) {
   var drink = "beer";
 } else {
   var drink = "juice";
 }*/
-
 
 //SWITCH STATEMENT
 /*var job = 'teacher';
@@ -282,28 +280,28 @@ switch (true) {
  * TRUTY AND FALSY VALUES AND EQUALITY OPERATORS
  */
 
- //falsy values: undefined, null, 0, '', NaN
- //truthy values: NOT falsy values
+//falsy values: undefined, null, 0, '', NaN
+//truthy values: NOT falsy values
 
- var height;
+var height;
 
- height = 23;
- if (height || height === 0) {
-   console.log('Variable is defined');
- } else {
-   console.log('Variable has NOT been defined');
- }
+height = 23;
+if (height || height === 0) {
+  console.log("Variable is defined");
+} else {
+  console.log("Variable has NOT been defined");
+}
 
- // Equality Operators
- if (height == '23') {
-   console.log('The == operator dose type coercion!');
- }
+// Equality Operators
+if (height == "23") {
+  console.log("The == operator dose type coercion!");
+}
 
- /*******************************************
-  * CODING CHALLENGE 2
-  */
+/*******************************************
+ * CODING CHALLENGE 2
+ */
 
-  /* 
+/* 
   John and Mike both play basketball on different 
   teams. In the latest 3 games, John's team scored 89, 
   120 and 103 points, while Mike's team scored 116, 94
@@ -329,7 +327,7 @@ switch (true) {
 
     */
 
-    /*var johnScore =  (89 + 120 + 103) / 3;
+/*var johnScore =  (89 + 120 + 103) / 3;
     var mikeScore =  (116 + 94 + 123) / 3;
     var maryScore = (97 + 134 + 105) / 3;
     console.log(mikeScore, johnScore,  maryScore);
@@ -344,11 +342,8 @@ switch (true) {
     } else {
       console.log('There is a draw');
     }*/
-    
-    
-    
-    
-    /*if (johnScore > mikeScore) {
+
+/*if (johnScore > mikeScore) {
       console.log('John\'s team wins with ' + johnScore + ' points');
 
   } else if (mikeScore > johnScore) {
@@ -357,11 +352,11 @@ switch (true) {
     console.log('there is a draw');
   }*/
 
-  /***********************************************************************
-   * FUNCTIONS
-   */
+/***********************************************************************
+ * FUNCTIONS
+ */
 
-   /*function calculateAge(birthYear) {
+/*function calculateAge(birthYear) {
      return 2018 - birthYear;
    }
 
@@ -388,15 +383,15 @@ switch (true) {
    yearsUntilRetirement(1991, 'jasmine');
    yearsUntilRetirement(1940, 'mike');*/
 
-   /****************************************************************
-    * FUNCTION STATEMENTS AND EXPRESSIONS
-    */
-   
-   //Function Declaration
-   //function whatDoYouDo(job, firstName) {}
-   
-    //Function expressions
-    /*var whatDoYouDo = function(job, firstName) {
+/****************************************************************
+ * FUNCTION STATEMENTS AND EXPRESSIONS
+ */
+
+//Function Declaration
+//function whatDoYouDo(job, firstName) {}
+
+//Function expressions
+/*var whatDoYouDo = function(job, firstName) {
       switch(job) {
         case 'teacher':
         return firstName + ' teaches kids how to code';
@@ -418,7 +413,7 @@ switch (true) {
  */
 
 //Initialize new Array
- var names = ['john', 'Mark', 'Jane'];
+/*var names = ['john', 'Mark', 'Jane'];
  var years = new Array(1990, 1969, 1948);
 
  console.log(names[2]);
@@ -444,4 +439,52 @@ switch (true) {
 
   var isDesigner = john.indexOf('designer') === -1 ? 'John is NOT a designer' 
  : 'John Is a designer';
- console.log(isDesigner);
+ console.log(isDesigner);*/
+
+/********************************************************************************
+ *  CODING CHALLANGE 2 REALLY 3 THOUGH NEXT ONE WILL BE 4
+ */
+/*
+
+  John and his family went on a holiday and went to 3 diffrent resturants.
+  The bills were $124, $48 and $268.
+  
+  To tip the waiter a fair amount , John created a tip calculator
+  (as a function). He likes to tip 20% of the bill when the bill is less then $50,
+  15% when the bill is between $50 and $200, and 10% if the bill is more then $200.
+
+  In the end, John would like to have 2 arrays:
+  1) Containing all three tips (one for each bill)
+  2) Containing all three final paid amounts (bill + tip).
+
+  (NOTE: To calculate 20% of a value, simply multiply if with 20/100 = 0.2)*/
+
+function tipCalculator(bill) {
+  var percentage;
+  if (bill < 50) {
+    percentage = 0.2;
+  } else if (bill >= 50 && bill < 200) {
+    percentage = 0.15;
+  } else {
+    percentage = 0.1;
+  }
+  return percentage * bill;
+}
+
+console.log(tipCalculator(50));
+
+var bills = [124, 48, 268];
+var tips = [
+  tipCalculator(bills[0]),
+  tipCalculator(bills[1]),
+  tipCalculator(bills[2])
+];
+
+var finalValues = [
+bills[0] + tips[0], 
+bills[1] + tips[1], 
+bills[2] + tips[2]];
+console.log(tips, finalValues);
+
+
+
