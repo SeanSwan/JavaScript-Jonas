@@ -224,7 +224,7 @@ if (BMIMark > BMIJohn) {
  * THE TERNARY OPERATOR AND SWITCH STATEMENTS
  */
 
-var firstName = "John";
+/*var firstName = "John";
 var age = 18;
 
 age >= 18
@@ -283,7 +283,7 @@ switch (true) {
 //falsy values: undefined, null, 0, '', NaN
 //truthy values: NOT falsy values
 
-var height;
+/*var height;
 
 height = 23;
 if (height || height === 0) {
@@ -295,7 +295,7 @@ if (height || height === 0) {
 // Equality Operators
 if (height == "23") {
   console.log("The == operator dose type coercion!");
-}
+}*/
 
 /*******************************************
  * CODING CHALLENGE 2
@@ -521,7 +521,7 @@ console.log(tips, finalValues);*/
  * OBJECTS AND METHODS
  */
 
-var john = {
+/*var john = {
   firstName: 'John',
   lastName: 'Smith',
   birthYear: 1992,
@@ -534,7 +534,52 @@ var john = {
 };
 
  john.calcAge();
- console.log(john)
+ console.log(john)*/
 
 
+ /************************************************************************************
+  * CODING CHALLANGE 4
+  */
+
+  /*Let's remember the first coding challange where Mark and john
+  compared their BMI's. Let's now implement the same functionality with objects and methods.
+  1. for each of them, create an object with properties for their full namespace, mass, and height
+  2. Then add a method to each object to calculate the BMI.firstNameSaveBMI to the object and also return it from method.
+  3.In the end, log to the console who has the highest BMI.
+  together wioth the full name and the respective BMI. Don't forget they might have the same BMI.
+
+  Remember: BMI = mass / height^2 = mass / (height * height).
+  (mass in kg and height in meter).*/
+
+
+  var john = {
+    fullName: 'John Smith',
+    mass: 92,
+    height: 1.95,
+    calcBMI: function() {
+      this.bmi = this.mass / (this.height * this.height);
+      return this.bmi;
+    }
+  }
+
+  var mark = {
+    fullName: 'Mark Smith',
+    mass: 122,
+    height: 1.99,
+    calcBMI: function() {
+      this.bmi = this.mass / (this.height * this.height);
+      return this.bmi;
+    }
+  }
+
+
+console.log(john, mark);
+
+if (john.calcBMI() > mark.calcBMI()) {
+  console.log(john.fullName + ' has higher BMI of ' + john.bmi.toFixed());
+} else if (mark.bmi > john.bmi) {
+  console.log(mark.fullName + ' has a higher BMI of ' + mark.bmi.toFixed());
+} else {
+  console.log('They have the same BMI');
+}
 
