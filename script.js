@@ -782,7 +782,7 @@ console.log(age);*/
  * FIRST SCOPING EXAMPLE
  */
 
- var a = 'Hello!';
+ /*var a = 'Hello!';
  first();
 
  function  first() {
@@ -799,6 +799,38 @@ function third() {
   var d = 'John';
   //console.log(c);
   console.log(a+d)
+}*/
+
+/*********************************************************************************
+ * THE "THIS" KEYWORD
+ */
+
+var john = {
+  name: 'John',
+  yearOfBirth: 1990,
+  calculateAge: function() {
+    console.log(this);
+    console.log(2016 - this.yearOfBirth);
+
+    // inner function used to show that console.logging 'this' in a declaritive function will have 'this'
+    // attached to the window not the object vs console log this in john object, 'this will be attached to object'
+    //'this' is only assigned a value when the object calls the method
+    function innerFunction() {
+      console.log(this);
+    }
+    innerFunction();
+  }
 }
+
+john.calculateAge();
+
+var mike = {
+  name: 'Mike',
+  yearOfBirth: 1994
+};
+
+// Borrowing  function calculateAge from john and using it for mike.
+mike.calculateAge = john.calculateAge;
+mike.calculateAge();
 
 
