@@ -826,3 +826,127 @@ mysql> DESC cats
 4 rows in set (0.00 sec)
 
 mysql> */
+
+/*Angular: Load external JavaScript file dynamically
+ 
+Zain ZafarFollow
+Jul 17, 2018
+If you are creating a large scale app or an enterprise application using Angular 2+, and you have components or directives that requires a certain external JavaScript dependencies like Stripe.js for payments integration, which most certainly isn't’ required on all views of course.
+________________________________________
+Why do you need to load JS Plugin files on demand?
+Angular being a SPA(Single Page Application) loads all it’s scripts on initial page load. So if index.html contains any external JS scripts that are not required on all views, which might increase the latency time for the page to load completely, not the best practice in my opinion.
+________________________________________
+So, how do you solve this issue?
+Let’s say you want to display a chart on your dashboard using ChartJS.
+Without further ado, let’s see how it’s done.
+Step 1:
+Create an Angular Service called DynamicScriptLoaderService*/
+
+
+
+/*import { Injectable } from '@angular/core';
+
+interface Scripts {
+  name: string;
+  src: string;
+}
+
+export const ScriptStore: Scripts[] = [
+  { name: 'chartjs', src: 'https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.bundle.min.js' },
+  { name: 'random-gen', src: '../../../assets/js/random-num-generator.js' }
+];
+
+declare var document: any;
+
+@Injectable()
+export class DynamicScriptLoaderService {
+
+  private scripts: any = {};
+
+  constructor() {
+    ScriptStore.forEach((script: any) => {
+      this.scripts[script.name] = {
+        loaded: false,
+        src: script.src
+      };
+    });
+  }
+
+  load(...scripts: string[]) {
+    const promises: any[] = [];
+    scripts.forEach((script) => promises.push(this.loadScript(script)));
+    return Promise.all(promises);
+  }
+
+  loadScript(name: string) {
+    return new Promise((resolve, reject) => {
+      if (!this.scripts[name].loaded) {
+        //load script
+        let script = document.createElement('script');
+        script.type = 'text/javascript';
+        script.src = this.scripts[name].src;
+        if (script.readyState) {  //IE
+            script.onreadystatechange = () => {
+                if (script.readyState === "loaded" || script.readyState === "complete") {
+                    script.onreadystatechange = null;
+                    this.scripts[name].loaded = true;
+                    resolve({script: name, loaded: true, status: 'Loaded'});
+                }
+            };
+        } else {  //Others
+            script.onload = () => {
+                this.scripts[name].loaded = true;
+                resolve({script: name, loaded: true, status: 'Loaded'});
+            };
+        }
+        script.onerror = (error: any) => resolve({script: name, loaded: false, status: 'Loaded'});
+        document.getElementsByTagName('head')[0].appendChild(script);
+      } else {
+        resolve({ script: name, loaded: true, status: 'Already Loaded' });
+      }
+    });
+  }
+
+}*/
+
+/*Last Step:
+
+Yes you read it right, all you need to do is call the service load method with keys of the scripts you want to load in DashboardComponent
+
+Let me show you how*/
+
+/*// Angular
+import { Component, OnInit } from '@angular/core';
+
+// Service
+import { DynamicScriptLoaderService } from '../../shared/services/dynamic-script-loader.service';
+
+@Component({
+  selector: 'app-dashboard',
+  templateUrl: './dashboard.component.html'
+})
+export class DashboardComponent implements OnInit {
+ 
+
+  constructor(private dynamicScriptLoader: DynamicScriptLoaderService) {}
+
+  ngOnInit() {
+    // Just call your load scripts function with scripts you want to load
+    this.loadScripts();
+  }
+  
+  private loadScripts() {
+    // You can load multiple scripts by just providing the key as argument into load method of the service
+    this.dynamicScriptLoader.load('chartjs','random-num').then(data => {
+      // Script Loaded Successfully
+    }).catch(error => console.log(error));
+  }
+
+}*/
+
+/*and….DONE!
+
+Conclusion
+Open your Network panel and go to the Home Page of your application, you won’t see chart-js script being fetched.
+
+Now try opening the Dashboard view and you’ll see, a request is sent to chart js CDN.*/
