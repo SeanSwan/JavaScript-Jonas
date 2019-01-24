@@ -805,7 +805,7 @@ function third() {
  * THE "THIS" KEYWORD
  */
 
-var john = {
+/*var john = {
   name: 'John',
   yearOfBirth: 1990,
   calculateAge: function() {
@@ -831,6 +831,89 @@ var mike = {
 
 // Borrowing  function calculateAge from john and using it for mike.
 mike.calculateAge = john.calculateAge;
-mike.calculateAge();
+mike.calculateAge();*/
+
+/******************************************************************************************************
+ * ADVANCED JAVASCRIPT: OBJECTS AND FUNCTIONS
+ * // Lecture: Function constructor
+ */
+
+
+var john = {
+    nameFirst: 'John',
+    nameLast: 'Swan',
+    yearOfBirth: 1990,
+    job: 'trainer',
+    email: 'ogpswan@yahoo.com',
+    address: '3771 Lockland drive, L.A., C.A.',
+    height: 6.1,
+    weight: 230,
+    restiingHeartRate: 77,
+    bodyFat: 12,
+    swimming: true,
+    neck: 8.9,
+    shoulders: 42,
+    bicepsL: 14,
+    foreArmL: 6.9,
+    chest: 47,
+    stomach: 32,
+    hips: 38,
+    butt: 34,
+    thighL: 24,
+    calfL: 14
+
+};
+
+var User = function(nameFirst, nameLast, yearOfBirth, job, email, address) {
+    this.nameFirst = nameFirst;
+    this.nameLast = nameLast;
+    this.yearOfBirth = yearOfBirth;
+    this.job = job;
+    this.email = email;
+    this.address = address;
+}
+
+User.prototype.calculateAge  = function() {
+  console.log(2016 - this.yearOfBirth);
+};
+
+var userFitStats = function(height, weight, restingHeartRate, bodyFat, swimmer,) {
+  this.height = height;
+  this.weight = weight;
+  this.restingHeartRate = restingHeartRate;
+  this.bodyFat = bodyFat;
+  this.swimmer = swimmer;
+}
+var userMesurements = function(neck, shoulders, bicepsL, 
+  foreArmL, chest, stomach, hips, butt, thighL, calfL) {
+  this.neck = neck;
+  this.shoulders = shoulders;
+  this.bicepsL = bicepsL;
+  this.foreArmL = foreArmL;
+  this.chest = chest;
+  this.stomach = stomach;
+  this.hips = hips;
+  this.butt = butt;
+  this.thighL = thighL;
+  this.calfL = calfL;
+}
+
+
+User.prototype.nameLast = 'Smith';
+
+var john = new User('John', 'Swan', 1980, 'teacher', 'ogpswan@yahoo.com', '3771 lockland dr, L.A., C.A.');
+var jane = new User('Jane',  'Wills', 1990, 'designer', 'ogpswan@yahoo.com', '3771 lockland dr, L.A., C.A.');
+var mark = new User('Mark', 'Butt', 1948, 'retired', 'ogpswan@yahoo.com', '3771 lockland dr, L.A., C.A.');
+
+var sean = new userFitStats(6.1, 230, 70, 18, true); 
+
+john.calculateAge();
+jane.calculateAge();
+mark.calculateAge();
+
+console.log(john.nameLast);
+console.log(jane.nameLast);
+console.log(mark.nameLast);
+console.log(sean);
 
 
